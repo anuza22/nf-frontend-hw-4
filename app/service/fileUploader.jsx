@@ -1,6 +1,7 @@
 import React from "react";
 import {axiosInstance} from './api';
 import { axiosUploadInstance } from "./api";
+import Image from "next/image";
 
 function FileUploader(){
     const [file, setFile] = useState<File | null>(null);
@@ -46,7 +47,7 @@ function FileUploader(){
         </label>
         <p>{status}</p>
         <p>uploaded {loadedBytes} bytes of {totalBytes}</p>
-        {file && <img src={file} alt="Preview" style={{ width: "300px", height: "100px" }} />}
+        {file && <Image src={file} alt="Preview" style={{ width: "300px", height: "100px" }} />}
       </div>
     );
 }

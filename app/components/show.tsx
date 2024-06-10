@@ -1,7 +1,8 @@
+import Image from "next/image";
 const ImageShow = (props:any) => {
     return (
         <div className="relative group aspect-square bg-gray-100 rounded-lg overflow-hidden">
-            <img
+            <Image
                 src={props.src}
                 alt="Product Image"
                 width="200"
